@@ -1,0 +1,1 @@
+# spinbet-qa-automation
