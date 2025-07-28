@@ -1,8 +1,9 @@
-import { test, expect } from '@playwright/test';
+import { test } from '@playwright/test';
 import { validData, invalidData, } from '../data/registrationData.json' assert { type: 'json' };
 
 import { HomePage } from '../pages/HomePage.js';
 import { CountryCurrencyPage } from '../pages/CountryAndCurrency.js';
+import { AccountDetailsPage } from '../pages/AccountDetails.js';
 
 
 
@@ -16,10 +17,6 @@ test.beforeEach(async ({ page }) => {
   homePage = new HomePage(page);
   countryCurrencyPage = new CountryCurrencyPage(page);
   accountDetailsPage = new AccountDetailsPage(page);
-  bonusSelectionPage = new BonusSelectionPage(page);
-  personalInformationPage = new PersonalInformationPage(page);
-  addressDetailsPage = new AddressDetailsPage(page);
-  paymentPage = new PaymentPage(page);
 });
 
 test('select Canada as country, then iterate all currencies', async ({ page }) => {
