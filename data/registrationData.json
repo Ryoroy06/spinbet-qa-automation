@@ -1,0 +1,58 @@
+{
+  "validData": {
+    "firstame":"Testtest",
+    "lastName":"Testtest",
+    "username": "testest",
+    "email": "john.doe12322@example.com",
+    "password": "SecurePass123",
+    "mobile": "09171234567",
+    "Canada": "Canada",
+    "NewZealand": "NewZealand",
+    "DOB":"11/11/2000",
+    "CAD":"CAD",
+    "NZD":"NZD",
+    "EUR":"EUR",
+    "MXN":"MXN",
+    "NOX":"NOX",
+    "USD":"USD",
+    "Amount":"200",
+    "CardNumber":"4111111111111111",
+    "Date":"12/30",
+    "CardName":"Roy Test",
+    "SecurityCode":"123",
+    "Address":"123 Main St",
+    "Region":"Auckland Region",
+    "City":"Auckland",
+    "ZipCode":"1010"
+    
+  },
+
+   "invalidData": {
+    "firstame":"1232@",
+    "lastName":"1232@",
+    "username": "tesT",
+    "email": "test",
+    "password": "111",
+    "Canada": "Canada",
+    "NewZealand": "NewZealand",
+    "DOBInvalid":"11",
+    "DOBPastDate":"11/11/1600",
+    "DOBFutureDate":"11/11/2200",
+    "Amount":"10000",
+    "CardNumber":"1111111111111",
+    "Date":"11/11",
+    "SecurityCode":"1"
+  
+   },
+   "credentials": {
+    "Username":"RoyIgamingAcc",
+    "Password":"Test123123"
+  },
+
+  "games": {
+    "releaseTheBison":"Release the Bison",
+    "Password":"Test123123"
+  }
+
+
+}

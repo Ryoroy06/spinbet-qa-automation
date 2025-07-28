@@ -1,0 +1,48 @@
+import { test, expect } from '@playwright/test';
+import { validData, invalidData, } from '../data/registrationData.json' assert { type: 'json' };
+
+import { HomePage } from '../pages/HomePage.js';
+import { CountryCurrencyPage } from '../pages/CountryAndCurrency.js';
+
+
+
+let homePage;
+let countryCurrencyPage;
+let accountDetailsPage;
+const currencies = ['NZD', 'CAD', 'EUR', 'MXN', 'NOK', 'USD'];
+
+test.beforeEach(async ({ page }) => {
+
+  homePage = new HomePage(page);
+  countryCurrencyPage = new CountryCurrencyPage(page);
+  accountDetailsPage = new AccountDetailsPage(page);
+  bonusSelectionPage = new BonusSelectionPage(page);
+  personalInformationPage = new PersonalInformationPage(page);
+  addressDetailsPage = new AddressDetailsPage(page);
+  paymentPage = new PaymentPage(page);
+});
+
+test('select Canada as country, then iterate all currencies', async ({ page }) => {
+  await homePage.navigate();
+  await homePage.clickSignUp();
+  await homePage.ReloadPage();
+  for (const currency of currencies) {
+    await countryCurrencyPage.selectCurrency(currency);
+    await countryCurrencyPage.clickContinue();
+    await accountDetailsPage.usernamalabel();
+    await countryCurrencyPage.backBtn();
+  }
+
+})
+test('select Cannada as country, then iterate all currencies', async ({ page }) => {
+  await homePage.navigate();
+  await homePage.clickSignUp();
+  await homePage.ReloadPage();
+  await countryCurrencyPage.selectCountry(validData.Canada);
+  for (const currency of currencies) {
+    await countryCurrencyPage.selectCurrency(currency);
+    await countryCurrencyPage.clickContinue();
+    await accountDetailsPage.usernamalabel();
+    await countryCurrencyPage.backBtn();
+  }
+})
