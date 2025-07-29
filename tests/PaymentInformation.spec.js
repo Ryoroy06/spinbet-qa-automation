@@ -186,7 +186,7 @@ test('Should display "Invalid expiration date" error when cc-exp is invalid duri
   await paymentPage.ccExpInvalid();
 })
 
-test.only('Should display "Invalid CVC" error when CVC is invalid during registration', async ({ page }) => {
+test('Should display "Invalid CVC" error when CVC is invalid during registration', async ({ page }) => {
   await homePage.navigate();
   await homePage.clickSignUp();
   await homePage.ReloadPage();

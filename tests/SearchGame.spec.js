@@ -12,7 +12,7 @@ test.beforeEach(async ({ page }) => {
     accountPage = new UserAccountPage(page);
 });
 
-test.only('Validate Game Search and Launch Functionality', async ({ page }) => {
+test('Validate Game Search and Launch Functionality', async ({ page }) => {
     await homePage.navigate();
     await homePage.clickLogin();
     await homePage.userNameField(credentials.Username);
